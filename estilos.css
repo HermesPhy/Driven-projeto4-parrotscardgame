@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEF9BF;
+    cursor: default;
+}
+
+h1 {
+    color: #75B79E;
+    font-size: 56px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0px auto;
+}
+
+.carta {
+    width: 117px;
+    height: 146px;
+    position: relative;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 80px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    border: 1px solid #99CEA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform .5s linear;
+    transform-style: preserve-3d;
+}
+
+.frontFace {
+    transform: rotateY(180deg);
+}
+
+.show-front-face {
+    transform: rotateY(0deg);
+}
+
+.hide-front-face {
+    transform: rotateY(-180deg);
+}
+
+.relogio {
+    font-size: 27px;
+    color: #F31E00;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    margin-top: 13px;
+    margin-bottom: 23px;
+}
+
+@media (max-width: 426px) {
+    h1 {
+        font-size: 36px;
+    }
+}
